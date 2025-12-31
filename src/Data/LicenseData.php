@@ -46,6 +46,14 @@ class LicenseData extends Data implements DataLicenseData
     #[MapName('last_paid')]
     public ?string $last_paid = null;
 
+    #[MapInputName('due_date')]
+    #[MapName('due_date')]
+    public ?string $due_date = null;
+
+    #[MapInputName('billing_generated_at')]
+    #[MapName('billing_generated_at')]
+    public ?string $billing_generated_at = null;
+
     #[MapInputName('status')]
     #[MapName('status')]
     public ?string $status = null;

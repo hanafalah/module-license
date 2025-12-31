@@ -16,13 +16,17 @@ class ViewLicense extends ApiResource
   {
     $arr = [
       'id' => $this->id,
-      'reference_type' => $this->reference_type,
-      'reference_id' => $this->reference_id,
+      'license_key' => $this->license_key,
+      'name' => $this->name ?? null,
+      // 'reference_type' => $this->reference_type,
+      // 'reference_id' => $this->reference_id,
       'model_has_license' => $this->relationValidation('modelHasLicense',function(){
         return $this->modelHasLicense->toViewApi()->resolve();
       }),
       'expired_at' => $this->expired_at,
       'last_paid' => $this->last_paid,
+      'billing_generated_at' => $this->billing_generated_at,
+      'due_date' => $this->due_date,
       'status' => $this->status,
       'recurring_type' => $this->recurring_type,
       'flag' => $this->flag,

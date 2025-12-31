@@ -32,6 +32,8 @@ class License extends BaseModuleLicense implements ContractsLicense
             'recurring_type' => $license_dto->recurring_type,
             'reference_type' => $license_dto->reference_type,
             'reference_id'   => $license_dto->reference_id,
+            'due_date' => $license_dto->due_date,
+            'billing_generated_at' => $license_dto->billing_generated_at,
             'flag' => $license_dto->flag
         ];
         if (isset($license_dto->id)){

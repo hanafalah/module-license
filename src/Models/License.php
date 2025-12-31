@@ -26,6 +26,8 @@ class License extends BaseModel
         'reference_id',
         'expired_at',
         'last_paid',
+        'billing_generated_at',
+        'due_date',
         'status',
         'recurring_type',
         'flag',
